@@ -1,0 +1,42 @@
+[user]
+	name = lsr_linux_lab
+	email = hnczlsr@sina.com
+[alias]
+    st = status
+    ci = commit
+    save = commit -a -m 'Save'
+    co = checkout
+    br = branch
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    ls = ls-files
+    pullff = pull --ff-only
+    dis = diff --stat
+    dic = diff --cached
+    dics = diff --cached --stat
+    dih = diff HEAD~
+    dihs = diff HEAD~ --stat
+    gr = log --graph --format=compact # graph
+    grl = log --graph --format=line # graph line
+    grd = log --graph --format=detail # graph detail
+    gra = log --graph --format=compact --all # graph all
+    gral = log --graph --format=line --all # graph all line
+    grad = log --graph --format=detail --all # graph all in detail
+    sf = show --format=fuller --color-words
+    sfs = show --format=fuller --stat
+    root = rev-parse --show-toplevel
+
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[core]
+	editor = vim
+[push]
+	default = simple
+[core]
+    excludesfile = ~/.gitignore_global
+[pretty]
+    line = "%C(auto)%h%d %s %C(yellow)by %C(blue)%an %C(green)%ar"
+    compact = "%C(auto)%h %s %C(green)%ar%n %C(auto)%d%n"
+    detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ar%n %C(auto)%d%n"
