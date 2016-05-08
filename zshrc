@@ -9,3 +9,4 @@ source ~/.zsh/setPath.zsh
 
 # Aliases
 source ~/.zsh/aliases.zsh
+
