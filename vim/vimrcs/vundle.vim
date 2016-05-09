@@ -19,6 +19,11 @@ Plugin 'tpope/vim-pathogen'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdcommenter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub

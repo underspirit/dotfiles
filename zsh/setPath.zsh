@@ -9,5 +9,6 @@
  
  # added by Anaconda2 2.5.0 installer
  export PATH="/home/lsr/anaconda2/bin:$PATH"
+ export LD_LIBRARY_PATH=/home/lsr/anaconda2/lib:$LD_LIBRARY_PATH
  
  #export CUDA_LAUNCH_BLOCKING=1 
