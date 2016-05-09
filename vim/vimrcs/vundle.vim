@@ -24,6 +24,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+" Plugin 'davidhalter/jedi-vim'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 " Git plugin not hosted on GitHub

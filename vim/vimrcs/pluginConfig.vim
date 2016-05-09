@@ -32,3 +32,15 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'
 " YouCompleteMe
 let g:ycm_server_use_vim_stdout = 1
 let g:ycm_server_log_level = 'debug'
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
