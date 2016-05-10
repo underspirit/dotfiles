@@ -52,3 +52,6 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "zsh/custom/plugins/git-flow-completion"]
+	path = zsh/custom/plugins/git-flow-completion
+	url = https://github.com/bobthecow/git-flow-completion
