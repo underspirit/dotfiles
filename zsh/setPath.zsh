@@ -8,7 +8,8 @@
  export CUDA_HOME=/home/lsr/cuda-7.5
  
  # added by Anaconda2 2.5.0 installer
- export PATH="/home/lsr/anaconda2/bin:$PATH"
- export LD_LIBRARY_PATH=/home/lsr/anaconda2/lib:$LD_LIBRARY_PATH
+ export PATH="/home/lsr/software/node-v6.9.1-linux-x64/bin:/home/lsr/anaconda2/bin:$PATH"
+ # export LD_LIBRARY_PATH=/home/lsr/anaconda2/lib:$LD_LIBRARY_PATH
  
  #export CUDA_LAUNCH_BLOCKING=1 
+ export HUBOT_SLACK_TOKEN=xoxb-98028250418-cb4uY9KNbQSDJ2ny9fX1L6IP

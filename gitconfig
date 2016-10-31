@@ -11,11 +11,13 @@
     last = log -1 HEAD
     ls = ls-files
     pullff = pull --ff-only
-    dis = diff --stat
-    dic = diff --cached
-    dics = diff --cached --stat
-    dih = diff HEAD~
-    dihs = diff HEAD~ --stat
+    di = difftool # view difference between working directory and staging area
+    dis = difftool --stat # view difference status 
+    dic = difftool --cached # aka --staged, view diff between staging area and git directory(repository)
+    dics = difftool --cached --stat
+    dih = difftool HEAD # view diff between working directory and git directory
+    dihs = difftool HEAD --stat
+    gra = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     gr = log --graph --format=compact # graph
     grl = log --graph --format=line # graph line
     grd = log --graph --format=detail # graph detail

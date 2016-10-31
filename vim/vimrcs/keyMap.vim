@@ -9,7 +9,7 @@ nmap <leader>w :w!<cr>
 " toggle paste mode
 set pastetoggle=<F9> 
 " insert mode to Normal mode
-imap <S-i> <Esc>
+imap <leader>i <Esc>
 " system clipboard prefix 
 map <leader>f "+
 
