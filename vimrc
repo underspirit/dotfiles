@@ -18,4 +18,4 @@ source ~/.vim/vimrcs/pluginConfig.vim
 
 " key map
 source ~/.vim/vimrcs/keyMap.vim
-
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
