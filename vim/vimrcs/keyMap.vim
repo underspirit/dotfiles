@@ -85,3 +85,10 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+" code format
+nnoremap <leader>fo gg \| <s-v> \| <s-g> \| =
+
+" quickly toggle between the current tab and the last active tab
+let g:lasttab = 1
+nmap <Leader>tt :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()
