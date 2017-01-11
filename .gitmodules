@@ -55,3 +55,9 @@
 [submodule "zsh/custom/plugins/git-flow-completion"]
 	path = zsh/custom/plugins/git-flow-completion
 	url = https://github.com/bobthecow/git-flow-completion
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "vim/bundle/vim-snippets"]
+	path = vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
