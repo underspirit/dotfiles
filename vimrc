@@ -7,6 +7,9 @@ set t_Co=256
 " vundle
 source ~/.vim/vimrcs/vundle.vim
 
+" key map
+source ~/.vim/vimrcs/keyMap.vim
+
 " ultimate-Vim-configuration
 source ~/.vim/vimrcs/ultimate-vimrc-basic.vim
 
@@ -16,6 +19,4 @@ source ~/.vim/vimrcs/ultimate-vimrc-basic.vim
 " all plugin config 
 source ~/.vim/vimrcs/pluginConfig.vim
 
-" key map
-source ~/.vim/vimrcs/keyMap.vim
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif

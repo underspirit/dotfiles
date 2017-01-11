@@ -76,8 +76,8 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
-" Quickly open a buffer for scribble
-map <leader>q :e ~/buffer<cr>
+" Quickly close
+map <leader>q :q<cr>
 
 " Quickly open a markdown buffer for scribble
 map <leader>x :e ~/buffer.md<cr>

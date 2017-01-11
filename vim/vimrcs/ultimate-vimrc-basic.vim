@@ -165,14 +165,29 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+let my_tab=4
+" 1 tab == 4 spaces
+execute "set shiftwidth=".my_tab
+execute "set softtabstop=".my_tab
+execute "set tabstop=".my_tab
 
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set expandtab
+" allow toggling between local and default mode
+function! TabToggle()
+    if &expandtab
+        execute "set shiftwidth=".g:my_tab
+        set softtabstop=0
+        set noexpandtab
+    else
+        execute "set shiftwidth=".g:my_tab
+        execute "set softtabstop=".g:my_tab
+        set expandtab
+    endif
+endfunction
+nmap <F10> mz:execute TabToggle()<CR>'z
 
 " Linebreak on 500 characters
 set lbr
@@ -181,6 +196,7 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
 
 
 """"""""""""""""""""""""""""""

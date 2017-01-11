@@ -31,6 +31,7 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'
 
 " YouCompleteMe
 let g:ycm_key_list_select_completion = ['<c-n>']
+let g:ycm_goto_buffer_command = 'horizontal-split'
 let g:ycm_server_use_vim_stdout = 1
 let g:ycm_server_log_level = 'debug'
 let g:ycm_autoclose_preview_window_after_completion = 1
