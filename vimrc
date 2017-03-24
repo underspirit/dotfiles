@@ -10,9 +10,6 @@ source ~/.vim/vimrcs/vundle.vim
 " key map
 source ~/.vim/vimrcs/keyMap.vim
 
-" ultimate-Vim-configuration
-source ~/.vim/vimrcs/ultimate-vimrc-basic.vim
-
 " powerline plugin for vim
 "source ~/.vim/vimrcs/powerline.vim
 
