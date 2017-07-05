@@ -1,3 +1,9 @@
+# docker remove exited container
+alias dockerrm='docker rm $(docker ps -f status=exited -q)'
+# proxy
+alias pon='export http_proxy=http://duotai:pj4BzIcOA@marriott.h.xduotai.com:26040;export https_proxy=$http_proxy' 
+alias poff='unset http_proxy;unset https_proxy'
+
 # Use colors in coreutils utilities output
 alias ls='ls --color=auto'
 alias grep='grep --color'
@@ -64,3 +70,6 @@ function in() {
 function nonascii() {
     LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
 }
+
+# kubectl complemention
+source <(kubectl completion zsh)

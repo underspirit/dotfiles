@@ -5,16 +5,18 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+" reset syntastic
+nmap <leader>g :SyntasticReset<cr>
 
 " toggle paste mode
 set pastetoggle=<F9> 
 " insert mode to Normal mode
-imap <leader>i <Esc>
+inoremap jj <Esc>
 " system clipboard prefix 
 map <leader>f "+
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><space> :noh<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -285,6 +287,9 @@ function! TabToggle()
 endfunction
 nmap <F10> mz:execute TabToggle()<CR>'z
 
+" insert a tab in expandtab and insertMode
+inoremap j<tab> <ESC>l:set noexpandtab<CR>i<tab><ESC>:set expandtab<CR>li
+
 " Linebreak on 500 characters
 set lbr
 set tw=500
@@ -408,3 +413,41 @@ endfunction
 " if has("autocmd")
 "   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
+
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
+autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
+inoremap ) <c-r>=ClosePair(')')<CR>
+inoremap ] <c-r>=ClosePair(']')<CR>
+inoremap } <c-r>=CloseBracket()<CR>
+inoremap " <c-r>=QuoteDelim('"')<CR>
+inoremap ' <c-r>=QuoteDelim("'")<CR>
+
+function ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endf
+
+function CloseBracket()
+    if match(getline(line('.') + 1), '\s*}') < 0
+        return "\<CR>}"
+    else
+        return "\<Esc>j0f}a"
+    endif
+endf
+
+function QuoteDelim(char)
+    let line = getline('.')
+    let col = col('.')
+    if line[col - 2] == "\\"
+        return a:char
+    elseif line[col - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char.a:char."\<Esc>i"
+    endif
+endf
