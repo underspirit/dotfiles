@@ -1,3 +1,7 @@
+" open tab list and buffer list
+nmap <C-M> :tabs<CR>
+nmap <C-B> :ls<CR>
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
